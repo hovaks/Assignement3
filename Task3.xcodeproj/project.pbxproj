@@ -16,6 +16,7 @@
 		30B7FE89217DBB1B0042AB9A /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B7FE88217DBB1B0042AB9A /* ContactsTableViewController.swift */; };
 		30B7FE8B217DDEB10042AB9A /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B7FE8A217DDEB10042AB9A /* ContactTableViewCell.swift */; };
 		30B7FE8D217DEB510042AB9A /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B7FE8C217DEB510042AB9A /* ContactViewController.swift */; };
+		30B7FE8F217DFC4B0042AB9A /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B7FE8E217DFC4B0042AB9A /* AddContactViewController.swift */; };
 		7F3818CE1BB70E2705915736 /* Pods_Task3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EAD3CE22D2262C99FD05A0 /* Pods_Task3.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		30B7FE88217DBB1B0042AB9A /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		30B7FE8A217DDEB10042AB9A /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		30B7FE8C217DEB510042AB9A /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		30B7FE8E217DFC4B0042AB9A /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		71EAD3CE22D2262C99FD05A0 /* Pods_Task3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Task3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC3B23CC07EED71A61F14DE /* Pods-Task3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task3.release.xcconfig"; path = "Pods/Target Support Files/Pods-Task3/Pods-Task3.release.xcconfig"; sourceTree = "<group>"; };
 		E7EEE46E4C15A576ABE474DE /* Pods-Task3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Task3/Pods-Task3.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				30B7FE88217DBB1B0042AB9A /* ContactsTableViewController.swift */,
 				30B7FE8A217DDEB10042AB9A /* ContactTableViewCell.swift */,
 				30B7FE8C217DEB510042AB9A /* ContactViewController.swift */,
+				30B7FE8E217DFC4B0042AB9A /* AddContactViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			files = (
 				30B7FE84217DB8850042AB9A /* Contact.swift in Sources */,
 				30B7FE8B217DDEB10042AB9A /* ContactTableViewCell.swift in Sources */,
+				30B7FE8F217DFC4B0042AB9A /* AddContactViewController.swift in Sources */,
 				30B7FE70217DB04C0042AB9A /* AppDelegate.swift in Sources */,
 				30B7FE89217DBB1B0042AB9A /* ContactsTableViewController.swift in Sources */,
 				30B7FE86217DBA3D0042AB9A /* NetworkController.swift in Sources */,

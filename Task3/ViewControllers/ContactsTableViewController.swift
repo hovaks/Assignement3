@@ -62,10 +62,14 @@ class ContactsTableViewController: UITableViewController {
                 let senderCell = sender as? ContactTableViewCell,
                 let destination = segue.destination as? ContactViewController
                 else {
-                    print("ERROR")
                     return
             }
             destination.contact = senderCell.contact
+            destination.networkController = networkController
+        }
+        
+        if segue.identifier == "AddContactSegue" {
+            guard let destination = segue.destination as? AddContactViewController else { return }
             destination.networkController = networkController
         }
     }

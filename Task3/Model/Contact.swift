@@ -17,3 +17,9 @@ struct Contact: Decodable {
     let notes: String?
     let images: [String]?
 }
+
+struct Image: Decodable {
+    let msg: String
+    let uploadid: String
+    let ids: [String]?
+}

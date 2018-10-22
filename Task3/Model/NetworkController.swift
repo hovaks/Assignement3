@@ -57,17 +57,101 @@ class NetworkController {
     
     func deleteContact(_ contact: Contact,
                        completion: @escaping (Error?) -> Void) {
+        //Delete Contact
         let urlString = baseURL + "/contacts" + "/\(contact._id)"
         guard let url = URL(string: urlString) else {
-            completion(nil)
             return
         }
+        
         Alamofire.request(url,
                           method: .delete,
                           parameters: nil,
                           encoding: JSONEncoding.default,
                           headers: headers).responseData { response in
                             return completion(response.result.error)
+        }
+        
+        //Delete Image
+        guard let imageID = contact.images?.first else { return }
+        let imageURLString = "https://stdevtask3-0510.restdb.io/media/" + "\(imageID)"
+        guard let imageURL = URL(string: imageURLString) else {
+            return
+        }
+        
+        Alamofire.request(imageURL,
+                          method: .delete,
+                          parameters: nil,
+                          encoding: JSONEncoding.default,
+                          headers: headers).responseData { response in
+                            return completion(response.result.error)
+        }
+    }
+    
+    func addContact(withData data: [String : Any],
+                    image: UIImage?,
+                    completion: @escaping (Error?) -> Void) {
+        
+        let urlString = baseURL + "/contacts"
+        guard let url = URL(string: urlString) else {
+            completion(nil)
+            return
+        }
+        
+        let imageURLString =  "https://stdevtask3-0510.restdb.io/media/"
+        guard let imageURL = URL(string: imageURLString) else {
+            return
+        }
+        
+        var parameters = data
+        
+        if let image = image {
+            let imageData = image.jpegData(compressionQuality: 1.0)!
+            
+            Alamofire.upload(imageData,
+                             to: imageURL,
+                             method: .post,
+                             headers: headers).responseData { response in
+                                switch response.result {
+                                case .success:
+                                    guard
+                                        let data = response.data
+                                        else { return }
+                                    do {
+                                        //Serialize Products
+                                        let decoder = JSONDecoder()
+                                        decoder.keyDecodingStrategy = .convertFromSnakeCase
+                                        let image = try decoder.decode(Image.self, from: data)
+                                        //Incomplete Implementation
+                                    } catch let error {
+                                        print(error)
+                                    }
+                                    
+                                case.failure:
+                                    print("Failure")
+                                }
+                                
+            }
+        }
+        
+        
+        Alamofire.request(url,
+                          method: .post,
+                          parameters: data,
+                          encoding: JSONEncoding.default,
+                          headers: headers)
+            .responseData { response in
+                switch response.result {
+                case .success:
+                    guard
+                        let statusCode = response.response?.statusCode
+                        else { return }
+                    if statusCode == 201 {
+                        return completion(nil)
+                    }
+                    
+                case .failure(let error):
+                    return completion(error)
+                }
         }
     }
 }

@@ -9,10 +9,11 @@
 import Foundation
 
 struct Contact: Decodable {
+    let _id: String
     let firstName: String
     let lastName: String
     let phone: String
     let email: String
-    let notes: String
-    let images: [String]
+    let notes: String?
+    let images: [String]?
 }

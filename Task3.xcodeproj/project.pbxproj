@@ -12,6 +12,9 @@
 		30B7FE77217DB04E0042AB9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30B7FE76217DB04E0042AB9A /* Assets.xcassets */; };
 		30B7FE7A217DB04E0042AB9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30B7FE78217DB04E0042AB9A /* LaunchScreen.storyboard */; };
 		30B7FE84217DB8850042AB9A /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B7FE83217DB8850042AB9A /* Contact.swift */; };
+		30B7FE86217DBA3D0042AB9A /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B7FE85217DBA3D0042AB9A /* NetworkController.swift */; };
+		30B7FE89217DBB1B0042AB9A /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B7FE88217DBB1B0042AB9A /* ContactsTableViewController.swift */; };
+		30B7FE8B217DDEB10042AB9A /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B7FE8A217DDEB10042AB9A /* ContactTableViewCell.swift */; };
 		7F3818CE1BB70E2705915736 /* Pods_Task3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EAD3CE22D2262C99FD05A0 /* Pods_Task3.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +27,9 @@
 		30B7FE7B217DB04E0042AB9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30B7FE81217DB4A40042AB9A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		30B7FE83217DB8850042AB9A /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		30B7FE85217DBA3D0042AB9A /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		30B7FE88217DBB1B0042AB9A /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		30B7FE8A217DDEB10042AB9A /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		71EAD3CE22D2262C99FD05A0 /* Pods_Task3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Task3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC3B23CC07EED71A61F14DE /* Pods-Task3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task3.release.xcconfig"; path = "Pods/Target Support Files/Pods-Task3/Pods-Task3.release.xcconfig"; sourceTree = "<group>"; };
 		E7EEE46E4C15A576ABE474DE /* Pods-Task3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Task3/Pods-Task3.debug.xcconfig"; sourceTree = "<group>"; };
@@ -62,6 +68,7 @@
 		30B7FE6E217DB04C0042AB9A /* Task3 */ = {
 			isa = PBXGroup;
 			children = (
+				30B7FE87217DBAF40042AB9A /* ViewControllers */,
 				30B7FE82217DB8670042AB9A /* Model */,
 				30B7FE81217DB4A40042AB9A /* .gitignore */,
 				30B7FE6F217DB04C0042AB9A /* AppDelegate.swift */,
@@ -76,9 +83,19 @@
 		30B7FE82217DB8670042AB9A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				30B7FE85217DBA3D0042AB9A /* NetworkController.swift */,
 				30B7FE83217DB8850042AB9A /* Contact.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		30B7FE87217DBAF40042AB9A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				30B7FE88217DBB1B0042AB9A /* ContactsTableViewController.swift */,
+				30B7FE8A217DDEB10042AB9A /* ContactTableViewCell.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		779D7BBA59B0E9314513F15D /* Frameworks */ = {
@@ -211,7 +228,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				30B7FE84217DB8850042AB9A /* Contact.swift in Sources */,
+				30B7FE8B217DDEB10042AB9A /* ContactTableViewCell.swift in Sources */,
 				30B7FE70217DB04C0042AB9A /* AppDelegate.swift in Sources */,
+				30B7FE89217DBB1B0042AB9A /* ContactsTableViewController.swift in Sources */,
+				30B7FE86217DBA3D0042AB9A /* NetworkController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

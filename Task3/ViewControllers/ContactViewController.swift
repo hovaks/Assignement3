@@ -68,7 +68,6 @@ class ContactViewController: UIViewController {
     @IBAction func DeleteButtonTapped(_ sender: UIButton) {
         networkController.deleteContact(contact) { error in
             if error == nil {
-                print("contactDeleted")
                 self.navigationController?.popViewController(animated: true)
             }
         }

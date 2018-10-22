@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ContactTableViewCell: UITableViewCell {
     @IBOutlet weak var avatarImageView: UIImageView!
@@ -35,17 +36,21 @@ class ContactTableViewCell: UITableViewCell {
     
     private func setup(with contact: Contact) {
         
-//        var baseURLString = "http://142.93.143.76"
-//        baseURLString += "/images/\(product.image)"
-//        guard let url = URL(string: baseURLString) else { return }
-//        productImageView.kf.indicatorType = .activity
-//        productImageView.kf.setImage(with: url)
+        if let imageID = contact.images?.first {
+        let baseURLString = "https://stdevtask3-0510.restdb.io/media/" + "\(imageID)"
+            let url = URL(string: baseURLString)
+            let size = CGSize(width: avatarImageView.bounds.size.width,
+                              height: avatarImageView.bounds.size.height)
+            let p = ResizingImageProcessor(referenceSize: size, mode: .aspectFit)
+            avatarImageView.kf.setImage(with: url, options: [.processor(p)])
+        }
+        
         firstNameLabel.text = contact.firstName
         lastNameLabel.text = contact.lastName
         phoneLabel.text = contact.phone
         emailLabel.text = contact.email
         if let notes = contact.notes {
-            notesLabel.text = contact.notes
+            notesLabel.text = notes
         } else {
             notesLabel.text = " "
         }

@@ -7,5 +7,6 @@ target 'Task3' do
 
   # Pods for Task3
 	pod 'Alamofire', '~> 4.7'
+	pod 'Kingfisher', '~> 4.0'
 
 end

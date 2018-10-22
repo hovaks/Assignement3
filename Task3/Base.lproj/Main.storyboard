@@ -24,7 +24,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="133.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jzN-mh-XSK">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarImage" translatesAutoresizingMaskIntoConstraints="NO" id="jzN-mh-XSK">
                                             <rect key="frame" x="16" y="11" width="111.5" height="111.5"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCR-y6-2io">
@@ -112,4 +112,7 @@
             <point key="canvasLocation" x="40.799999999999997" y="25.637181409295355"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="avatarImage" width="75" height="75"/>
+    </resources>
 </document>

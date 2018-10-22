@@ -11,6 +11,7 @@ import Kingfisher
 
 class ContactViewController: UIViewController {
     
+    var networkController: NetworkController!
     
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -64,6 +65,14 @@ class ContactViewController: UIViewController {
         UIApplication.shared.open(email)
     }
     
+    @IBAction func DeleteButtonTapped(_ sender: UIButton) {
+        networkController.deleteContact(contact) { error in
+            if error == nil {
+                print("contactDeleted")
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+    }
     
     /*
      // MARK: - Navigation

@@ -54,4 +54,20 @@ class NetworkController {
                 }
         }
     }
+    
+    func deleteContact(_ contact: Contact,
+                       completion: @escaping (Error?) -> Void) {
+        let urlString = baseURL + "/contacts" + "/\(contact._id)"
+        guard let url = URL(string: urlString) else {
+            completion(nil)
+            return
+        }
+        Alamofire.request(url,
+                          method: .delete,
+                          parameters: nil,
+                          encoding: JSONEncoding.default,
+                          headers: headers).responseData { response in
+                            return completion(response.result.error)
+        }
+    }
 }

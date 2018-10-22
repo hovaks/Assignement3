@@ -108,7 +108,9 @@
                             <outlet property="delegate" destination="WPU-BL-tvz" id="cbu-GX-mCZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Contacts" id="cpY-Ym-BEv"/>
+                    <navigationItem key="navigationItem" title="Contacts" id="cpY-Ym-BEv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hTm-Bj-ptl"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U7g-FK-zoV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -167,6 +169,15 @@
                                     <action selector="emailButtonTapped:" destination="wzk-S6-J0D" eventType="touchUpInside" id="Ea6-Kk-LlQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZo-18-Bpd">
+                                <rect key="frame" x="136" y="617" width="103" height="30"/>
+                                <state key="normal" title="Delete Contact">
+                                    <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <action selector="DeleteButtonTapped:" destination="wzk-S6-J0D" eventType="touchUpInside" id="9ps-xW-F2Y"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AU6-83-j6V">
                                 <rect key="frame" x="16" y="350" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -179,11 +190,13 @@
                             <constraint firstItem="BnR-5M-bvl" firstAttribute="top" secondItem="B1J-AV-Ir1" secondAttribute="bottom" constant="4" id="0ed-bN-n6e"/>
                             <constraint firstItem="B1J-AV-Ir1" firstAttribute="leading" secondItem="KbM-bt-675" secondAttribute="leading" constant="16" id="3Qm-cR-hZC"/>
                             <constraint firstItem="KbM-bt-675" firstAttribute="trailing" secondItem="BnR-5M-bvl" secondAttribute="trailing" constant="16" id="4VA-ND-9FR"/>
+                            <constraint firstItem="KbM-bt-675" firstAttribute="bottom" secondItem="WZo-18-Bpd" secondAttribute="bottom" constant="20" id="5AP-g9-22w"/>
                             <constraint firstItem="Qwm-6i-NNo" firstAttribute="top" secondItem="AU6-83-j6V" secondAttribute="bottom" constant="4" id="5rr-ua-6YC"/>
                             <constraint firstItem="Dku-xy-dyI" firstAttribute="top" secondItem="DzU-D5-OVa" secondAttribute="bottom" constant="8" id="7Zp-1X-30B"/>
                             <constraint firstItem="AU6-83-j6V" firstAttribute="leading" secondItem="KbM-bt-675" secondAttribute="leading" constant="16" id="Al0-JI-Vc8"/>
                             <constraint firstItem="Dku-xy-dyI" firstAttribute="centerX" secondItem="KbM-bt-675" secondAttribute="centerX" id="En4-ah-y5C"/>
                             <constraint firstItem="Qwm-6i-NNo" firstAttribute="leading" secondItem="KbM-bt-675" secondAttribute="leading" constant="16" id="HnG-sm-yfp"/>
+                            <constraint firstItem="KbM-bt-675" firstAttribute="trailing" secondItem="WZo-18-Bpd" secondAttribute="trailing" constant="136" id="Kcg-KX-1aW"/>
                             <constraint firstItem="aBc-xW-yMl" firstAttribute="leading" secondItem="KbM-bt-675" secondAttribute="leading" constant="16" id="MLw-fl-LgF"/>
                             <constraint firstItem="KbM-bt-675" firstAttribute="trailing" secondItem="t1n-xg-kKx" secondAttribute="trailing" constant="16" id="WjR-K1-TbD"/>
                             <constraint firstItem="B1J-AV-Ir1" firstAttribute="top" secondItem="aBc-xW-yMl" secondAttribute="bottom" constant="8" id="XtJ-Ga-BmW"/>
@@ -191,6 +204,7 @@
                             <constraint firstItem="aBc-xW-yMl" firstAttribute="top" secondItem="t1n-xg-kKx" secondAttribute="bottom" constant="4" id="ZPd-zv-YTl"/>
                             <constraint firstItem="KbM-bt-675" firstAttribute="trailing" secondItem="AU6-83-j6V" secondAttribute="trailing" constant="16" id="duN-9X-7Wj"/>
                             <constraint firstItem="t1n-xg-kKx" firstAttribute="leading" secondItem="KbM-bt-675" secondAttribute="leading" constant="16" id="eqn-dd-Mwl"/>
+                            <constraint firstItem="WZo-18-Bpd" firstAttribute="leading" secondItem="KbM-bt-675" secondAttribute="leading" constant="136" id="ld4-Tv-gPv"/>
                             <constraint firstItem="Dku-xy-dyI" firstAttribute="leading" secondItem="KbM-bt-675" secondAttribute="leading" constant="16" id="nir-4t-Uqf"/>
                             <constraint firstItem="KbM-bt-675" firstAttribute="trailing" secondItem="Dku-xy-dyI" secondAttribute="trailing" constant="16" id="rJu-7b-dzQ"/>
                             <constraint firstItem="DzU-D5-OVa" firstAttribute="top" secondItem="KbM-bt-675" secondAttribute="top" constant="16" id="rod-u0-syW"/>
@@ -213,7 +227,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RFL-ak-nKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1712.8" y="25.637181409295355"/>
+            <point key="canvasLocation" x="1881" y="26"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kcE-2K-1AD">
